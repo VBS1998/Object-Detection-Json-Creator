@@ -11,6 +11,7 @@
 		077D0EDC24B7AD8F00177C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EDB24B7AD8F00177C52 /* ViewController.swift */; };
 		077D0EDE24B7AD9400177C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 077D0EDD24B7AD9400177C52 /* Assets.xcassets */; };
 		077D0EE124B7AD9400177C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077D0EDF24B7AD9400177C52 /* Main.storyboard */; };
+		B1515E33273656B68B740411 /* Pods_JSONGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB5B03B940440DF41B14E4F /* Pods_JSONGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,9 @@
 		077D0EE024B7AD9400177C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		077D0EE224B7AD9400177C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		077D0EE324B7AD9400177C52 /* JSONGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JSONGenerator.entitlements; sourceTree = "<group>"; };
+		B54A33CF009A7E5099779FBA /* Pods-JSONGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONGenerator.debug.xcconfig"; path = "Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		BDDB2B5120CEFC6DBAB812F7 /* Pods-JSONGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONGenerator.release.xcconfig"; path = "Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		FEB5B03B940440DF41B14E4F /* Pods_JSONGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1515E33273656B68B740411 /* Pods_JSONGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +44,8 @@
 			children = (
 				077D0ED824B7AD8F00177C52 /* JSONGenerator */,
 				077D0ED724B7AD8F00177C52 /* Products */,
+				EBB4B989D6D456ECD1BB05EB /* Pods */,
+				BB1CE14025ACAF97698BF36D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +70,24 @@
 			path = JSONGenerator;
 			sourceTree = "<group>";
 		};
+		BB1CE14025ACAF97698BF36D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEB5B03B940440DF41B14E4F /* Pods_JSONGenerator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBB4B989D6D456ECD1BB05EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B54A33CF009A7E5099779FBA /* Pods-JSONGenerator.debug.xcconfig */,
+				BDDB2B5120CEFC6DBAB812F7 /* Pods-JSONGenerator.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 077D0EE624B7AD9400177C52 /* Build configuration list for PBXNativeTarget "JSONGenerator" */;
 			buildPhases = (
+				9FADC918189451F10E75F223 /* [CP] Check Pods Manifest.lock */,
 				077D0ED224B7AD8F00177C52 /* Sources */,
 				077D0ED324B7AD8F00177C52 /* Frameworks */,
 				077D0ED424B7AD8F00177C52 /* Resources */,
+				01262958BD0E6BEB7EC1867A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +154,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01262958BD0E6BEB7EC1867A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FADC918189451F10E75F223 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSONGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		077D0ED224B7AD8F00177C52 /* Sources */ = {
@@ -267,6 +336,7 @@
 		};
 		077D0EE724B7AD9400177C52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54A33CF009A7E5099779FBA /* Pods-JSONGenerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JSONGenerator/JSONGenerator.entitlements;
@@ -287,6 +357,7 @@
 		};
 		077D0EE824B7AD9400177C52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDB2B5120CEFC6DBAB812F7 /* Pods-JSONGenerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JSONGenerator/JSONGenerator.entitlements;
