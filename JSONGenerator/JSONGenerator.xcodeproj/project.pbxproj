@@ -3,25 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		077D0EDA24B7AD8F00177C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0ED924B7AD8F00177C52 /* AppDelegate.swift */; };
-		077D0EDC24B7AD8F00177C52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EDB24B7AD8F00177C52 /* ViewController.swift */; };
 		077D0EDE24B7AD9400177C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 077D0EDD24B7AD9400177C52 /* Assets.xcassets */; };
 		077D0EE124B7AD9400177C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 077D0EDF24B7AD9400177C52 /* Main.storyboard */; };
+		077D0EEE24B7B33700177C52 /* FileRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EED24B7B33700177C52 /* FileRequestViewController.swift */; };
+		077D0EF124B7BD7700177C52 /* RectingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EEF24B7BD7700177C52 /* RectingViewController.swift */; };
+		077D0EF624B7BEFC00177C52 /* RectableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EF524B7BEFC00177C52 /* RectableView.swift */; };
+		077D0EF824B7C18200177C52 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EF724B7C18200177C52 /* CGPoint+Extension.swift */; };
+		077D0EFA24B8E7E700177C52 /* NamedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0EF924B8E7E700177C52 /* NamedRect.swift */; };
+		077D0F0524B9061700177C52 /* NameRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077D0F0324B9061700177C52 /* NameRequestViewController.swift */; };
 		B1515E33273656B68B740411 /* Pods_JSONGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB5B03B940440DF41B14E4F /* Pods_JSONGenerator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		077D0ED624B7AD8F00177C52 /* JSONGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		077D0ED924B7AD8F00177C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		077D0EDB24B7AD8F00177C52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		077D0EDD24B7AD9400177C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		077D0EE024B7AD9400177C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		077D0EE224B7AD9400177C52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		077D0EE324B7AD9400177C52 /* JSONGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JSONGenerator.entitlements; sourceTree = "<group>"; };
+		077D0EED24B7B33700177C52 /* FileRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRequestViewController.swift; sourceTree = "<group>"; };
+		077D0EEF24B7BD7700177C52 /* RectingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectingViewController.swift; sourceTree = "<group>"; };
+		077D0EF524B7BEFC00177C52 /* RectableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectableView.swift; sourceTree = "<group>"; };
+		077D0EF724B7C18200177C52 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
+		077D0EF924B8E7E700177C52 /* NamedRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamedRect.swift; sourceTree = "<group>"; };
+		077D0F0324B9061700177C52 /* NameRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameRequestViewController.swift; sourceTree = "<group>"; };
 		B54A33CF009A7E5099779FBA /* Pods-JSONGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONGenerator.debug.xcconfig"; path = "Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator.debug.xcconfig"; sourceTree = "<group>"; };
 		BDDB2B5120CEFC6DBAB812F7 /* Pods-JSONGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONGenerator.release.xcconfig"; path = "Target Support Files/Pods-JSONGenerator/Pods-JSONGenerator.release.xcconfig"; sourceTree = "<group>"; };
 		FEB5B03B940440DF41B14E4F /* Pods_JSONGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,14 +70,67 @@
 		077D0ED824B7AD8F00177C52 /* JSONGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				077D0EFF24B9046E00177C52 /* Extensions */,
+				077D0EFE24B9045C00177C52 /* Views */,
+				077D0EFD24B9043F00177C52 /* ViewControllers */,
+				077D0F0224B9049600177C52 /* Storyboards */,
+				077D0F0024B9047400177C52 /* Model */,
+				077D0F0124B9048300177C52 /* Resources */,
+			);
+			path = JSONGenerator;
+			sourceTree = "<group>";
+		};
+		077D0EFD24B9043F00177C52 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				077D0EED24B7B33700177C52 /* FileRequestViewController.swift */,
+				077D0EEF24B7BD7700177C52 /* RectingViewController.swift */,
+				077D0F0324B9061700177C52 /* NameRequestViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		077D0EFE24B9045C00177C52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				077D0EF524B7BEFC00177C52 /* RectableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		077D0EFF24B9046E00177C52 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				077D0EF724B7C18200177C52 /* CGPoint+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		077D0F0024B9047400177C52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				077D0EF924B8E7E700177C52 /* NamedRect.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		077D0F0124B9048300177C52 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				077D0ED924B7AD8F00177C52 /* AppDelegate.swift */,
-				077D0EDB24B7AD8F00177C52 /* ViewController.swift */,
 				077D0EDD24B7AD9400177C52 /* Assets.xcassets */,
-				077D0EDF24B7AD9400177C52 /* Main.storyboard */,
 				077D0EE224B7AD9400177C52 /* Info.plist */,
 				077D0EE324B7AD9400177C52 /* JSONGenerator.entitlements */,
 			);
-			path = JSONGenerator;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		077D0F0224B9049600177C52 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				077D0EDF24B7AD9400177C52 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		BB1CE14025ACAF97698BF36D /* Frameworks */ = {
@@ -84,7 +147,6 @@
 				B54A33CF009A7E5099779FBA /* Pods-JSONGenerator.debug.xcconfig */,
 				BDDB2B5120CEFC6DBAB812F7 /* Pods-JSONGenerator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,8 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				077D0EDC24B7AD8F00177C52 /* ViewController.swift in Sources */,
+				077D0EF124B7BD7700177C52 /* RectingViewController.swift in Sources */,
+				077D0EEE24B7B33700177C52 /* FileRequestViewController.swift in Sources */,
+				077D0F0524B9061700177C52 /* NameRequestViewController.swift in Sources */,
+				077D0EF624B7BEFC00177C52 /* RectableView.swift in Sources */,
+				077D0EF824B7C18200177C52 /* CGPoint+Extension.swift in Sources */,
 				077D0EDA24B7AD8F00177C52 /* AppDelegate.swift in Sources */,
+				077D0EFA24B8E7E700177C52 /* NamedRect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,12 +406,12 @@
 			baseConfigurationReference = B54A33CF009A7E5099779FBA /* Pods-JSONGenerator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = JSONGenerator/JSONGenerator.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JSONGenerator/Resources/JSONGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QYGYSPJFH9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = JSONGenerator/Info.plist;
+				INFOPLIST_FILE = JSONGenerator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -360,12 +427,12 @@
 			baseConfigurationReference = BDDB2B5120CEFC6DBAB812F7 /* Pods-JSONGenerator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = JSONGenerator/JSONGenerator.entitlements;
+				CODE_SIGN_ENTITLEMENTS = JSONGenerator/Resources/JSONGenerator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = QYGYSPJFH9;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = JSONGenerator/Info.plist;
+				INFOPLIST_FILE = JSONGenerator/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

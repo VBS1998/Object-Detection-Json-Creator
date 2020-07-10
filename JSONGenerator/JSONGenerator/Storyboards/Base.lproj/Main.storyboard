@@ -701,32 +701,156 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--File Request View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="JSONGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="FileRequestViewController" customModule="JSONGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WlG-2b-agJ">
-                                <rect key="frame" x="181" y="127" width="118" height="16"/>
+                                <rect key="frame" x="181" y="61" width="118" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Insira uma imagem" id="yj2-dV-dj1">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-bC-bSU" customClass="ADragDropView" customModule="ADragDropView">
+                                <rect key="frame" x="160" y="85" width="161" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6Mn-bC-bSU" secondAttribute="height" id="XFb-KN-x3A"/>
+                                </constraints>
+                            </customView>
+                            <imageView horizontalHuggingPriority="200" verticalHuggingPriority="200" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="74f-KJ-yLM">
+                                <rect key="frame" x="160" y="85" width="161" height="161"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="svO-Ux-B4j"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l7m-Pm-DHt">
+                                <rect key="frame" x="162" y="17" width="156" height="32"/>
+                                <buttonCell key="cell" type="push" title="Selecionar Imagem" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UgF-Mf-vMK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="ocn-CQ-idx" kind="show" id="4ZN-dR-YjI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="WlG-2b-agJ" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="FY1-KC-9KZ"/>
+                            <constraint firstItem="74f-KJ-yLM" firstAttribute="leading" secondItem="6Mn-bC-bSU" secondAttribute="leading" id="3vD-ja-uqg"/>
+                            <constraint firstItem="l7m-Pm-DHt" firstAttribute="top" secondItem="WlG-2b-agJ" secondAttribute="bottom" constant="16" id="84a-1c-eb0"/>
+                            <constraint firstItem="WlG-2b-agJ" firstAttribute="top" secondItem="6Mn-bC-bSU" secondAttribute="bottom" constant="8" id="EfY-DN-APf"/>
+                            <constraint firstItem="74f-KJ-yLM" firstAttribute="top" secondItem="6Mn-bC-bSU" secondAttribute="top" id="GvE-PR-cYd"/>
+                            <constraint firstAttribute="bottom" secondItem="l7m-Pm-DHt" secondAttribute="bottom" constant="24" id="KJA-M0-agO"/>
+                            <constraint firstItem="6Mn-bC-bSU" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="dPO-gO-7ED"/>
+                            <constraint firstItem="l7m-Pm-DHt" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="f0E-1F-Drg"/>
+                            <constraint firstItem="74f-KJ-yLM" firstAttribute="trailing" secondItem="6Mn-bC-bSU" secondAttribute="trailing" id="jsN-ZQ-mzg"/>
+                            <constraint firstItem="6Mn-bC-bSU" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="24" id="mXF-AD-9Tj"/>
                             <constraint firstItem="WlG-2b-agJ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="w7e-zx-DxQ"/>
+                            <constraint firstItem="74f-KJ-yLM" firstAttribute="bottom" secondItem="6Mn-bC-bSU" secondAttribute="bottom" id="zhI-jp-qsZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="centralLabel" destination="WlG-2b-agJ" id="qFo-3v-IQB"/>
+                        <outlet property="dragAndDropView" destination="6Mn-bC-bSU" id="4U3-pR-WZm"/>
+                        <outlet property="imageView" destination="74f-KJ-yLM" id="jbp-tY-Lf0"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Recting View Controller-->
+        <scene sceneID="Nc9-9A-klz">
+            <objects>
+                <viewController id="ocn-CQ-idx" customClass="RectingViewController" customModule="JSONGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="6hy-9H-IWt">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-3l-cNj">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="UE5-Xg-5cy"/>
+                            </imageView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="z5F-G1-g3b" customClass="RectableView" customModule="JSONGenerator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="bbl-3l-cNj" firstAttribute="top" secondItem="6hy-9H-IWt" secondAttribute="top" id="KNV-a6-qch"/>
+                            <constraint firstAttribute="trailing" secondItem="z5F-G1-g3b" secondAttribute="trailing" id="RNu-cP-WdU"/>
+                            <constraint firstAttribute="bottom" secondItem="z5F-G1-g3b" secondAttribute="bottom" id="UsM-Ue-9uM"/>
+                            <constraint firstItem="bbl-3l-cNj" firstAttribute="leading" secondItem="6hy-9H-IWt" secondAttribute="leading" id="aJL-X1-rU5"/>
+                            <constraint firstAttribute="trailing" secondItem="bbl-3l-cNj" secondAttribute="trailing" id="fFn-ML-dfp"/>
+                            <constraint firstItem="z5F-G1-g3b" firstAttribute="top" secondItem="6hy-9H-IWt" secondAttribute="top" id="gtJ-Hu-04r"/>
+                            <constraint firstAttribute="bottom" secondItem="bbl-3l-cNj" secondAttribute="bottom" id="sN9-gE-iN6"/>
+                            <constraint firstItem="z5F-G1-g3b" firstAttribute="leading" secondItem="6hy-9H-IWt" secondAttribute="leading" id="xMc-Dx-pzC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bbl-3l-cNj" id="fO0-oS-WdU"/>
+                        <outlet property="rectableView" destination="z5F-G1-g3b" id="jul-Ki-lqg"/>
+                        <segue destination="Fhx-85-Stc" kind="popover" identifier="name" popoverBehavior="t" preferredEdge="maxY" id="ddm-WZ-U0S"/>
+                    </connections>
+                </viewController>
+                <customObject id="jY0-bn-rm7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="655"/>
+        </scene>
+        <!--Name Request View Controller-->
+        <scene sceneID="rGa-Ub-vx1">
+            <objects>
+                <viewController id="Fhx-85-Stc" customClass="NameRequestViewController" customModule="JSONGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="vFo-Le-JHw">
+                        <rect key="frame" x="0.0" y="0.0" width="326" height="150"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iJi-0K-Bus">
+                                <rect key="frame" x="52" y="110" width="223" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Inisira um nome para esse retangulo" id="kVG-RQ-hmB">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NzC-bC-Fug">
+                                <rect key="frame" x="54" y="65" width="219" height="21"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="OuN-Ad-svc">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-bf-hkg">
+                                <rect key="frame" x="113" y="13" width="101" height="32"/>
+                                <buttonCell key="cell" type="push" title="Confirmar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P1T-T7-Wc1">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="confirm:" target="Fhx-85-Stc" id="ZmG-jz-bWH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dRc-bf-hkg" firstAttribute="top" secondItem="NzC-bC-Fug" secondAttribute="bottom" constant="24" id="1PI-bu-uBT"/>
+                            <constraint firstItem="iJi-0K-Bus" firstAttribute="centerX" secondItem="vFo-Le-JHw" secondAttribute="centerX" id="3PK-EG-wIe"/>
+                            <constraint firstItem="dRc-bf-hkg" firstAttribute="centerX" secondItem="vFo-Le-JHw" secondAttribute="centerX" id="Lv0-un-eYp"/>
+                            <constraint firstItem="NzC-bC-Fug" firstAttribute="centerY" secondItem="vFo-Le-JHw" secondAttribute="centerY" id="Rkc-mV-dqZ"/>
+                            <constraint firstItem="NzC-bC-Fug" firstAttribute="trailing" secondItem="iJi-0K-Bus" secondAttribute="trailing" id="SMQ-dr-k4S"/>
+                            <constraint firstItem="NzC-bC-Fug" firstAttribute="leading" secondItem="iJi-0K-Bus" secondAttribute="leading" id="Zro-pH-YqK"/>
+                            <constraint firstItem="iJi-0K-Bus" firstAttribute="top" secondItem="vFo-Le-JHw" secondAttribute="top" constant="24" id="lyL-U3-ems"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="NzC-bC-Fug" id="NkT-bg-rzW"/>
+                    </connections>
+                </viewController>
+                <customObject id="O8c-5t-QRJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="1027"/>
         </scene>
     </scenes>
 </document>
