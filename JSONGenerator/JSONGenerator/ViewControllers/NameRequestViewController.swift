@@ -12,6 +12,8 @@ class NameRequestViewController: NSViewController {
 
     @IBOutlet weak var textField: NSTextField!
     
+    var parentVC : RectingViewController?
+    
     var rect : CGRect?
     
     override func viewDidLoad() {
@@ -21,7 +23,13 @@ class NameRequestViewController: NSViewController {
     
     @IBAction func confirm(_ sender: Any) {
         guard let rect = self.rect, textField.stringValue != "" else {return}
+        guard let parent = parentVC else {return}
         
+        let namedRect = NamedRect(from: rect, with: textField.stringValue)
         
+        parent.rects.append(namedRect)
+        parent.addRects()
+        
+        self.view.window?.windowController?.close()
     }
 }

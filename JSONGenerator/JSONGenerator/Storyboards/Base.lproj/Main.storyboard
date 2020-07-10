@@ -776,6 +776,22 @@
                             </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="z5F-G1-g3b" customClass="RectableView" customModule="JSONGenerator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XPd-U3-ivL">
+                                        <rect key="frame" x="387" y="1" width="91" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Finalizar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dom-dq-4oD">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="done:" target="ocn-CQ-idx" id="Jxi-GI-alj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XPd-U3-ivL" secondAttribute="bottom" constant="8" id="LIY-kx-ljK"/>
+                                    <constraint firstAttribute="trailing" secondItem="XPd-U3-ivL" secondAttribute="trailing" constant="8" id="j4I-Mp-lUB"/>
+                                </constraints>
                             </customView>
                         </subviews>
                         <constraints>
@@ -792,7 +808,7 @@
                     <connections>
                         <outlet property="imageView" destination="bbl-3l-cNj" id="fO0-oS-WdU"/>
                         <outlet property="rectableView" destination="z5F-G1-g3b" id="jul-Ki-lqg"/>
-                        <segue destination="Fhx-85-Stc" kind="popover" identifier="name" popoverBehavior="t" preferredEdge="maxY" id="ddm-WZ-U0S"/>
+                        <segue destination="Fhx-85-Stc" kind="show" identifier="name" id="4vf-uy-zYj"/>
                     </connections>
                 </viewController>
                 <customObject id="jY0-bn-rm7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

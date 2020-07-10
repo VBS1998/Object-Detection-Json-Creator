@@ -43,12 +43,11 @@ class RectingViewController: NSViewController {
     
                 let rectSize = CGSize(width: (endPoint.x - rectInit.x), height: (endPoint.y - rectInit.y))
     
-                let rect = CGRect(origin: rectInit, size: rectSize)
-                
-                rects.append(NamedRect(from: rect, with: "Insira Um Nome"))
+                currentRect = CGRect(origin: rectInit, size: rectSize)
+                performSegue(withIdentifier: "name", sender: self)
             }
             currentRectInit = nil
-            addRects()
+            currentRect = nil
         }
         
         else if recognizer.state == .cancelled || recognizer.state == .failed{
@@ -63,7 +62,10 @@ class RectingViewController: NSViewController {
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         guard let dest = segue.destinationController as? NameRequestViewController else {return}
         
-//        dest.rect =
+        dest.rect = self.currentRect
+        dest.parentVC = self
     }
     
+    @IBAction func done(_ sender: Any) {
+    }
 }
