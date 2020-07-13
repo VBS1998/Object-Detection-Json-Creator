@@ -15,6 +15,8 @@ class FileRequestViewController: NSViewController {
     @IBOutlet weak var centralLabel: NSTextField!
     @IBOutlet weak var imageView: NSImageView!
     
+    var imageURL : URL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,14 +33,17 @@ class FileRequestViewController: NSViewController {
         guard let dest = segue.destinationController as? RectingViewController else {return}
         
         dest.image = self.imageView.image
+        dest.imageURL = self.imageURL
     }
 }
 
+//MARK: Drag and Drop Delegate
 extension FileRequestViewController : ADragDropViewDelegate{
     func dragDropView(_ dragDropView: ADragDropView, droppedFileWithURL URL: URL) {
         centralLabel.stringValue = URL.absoluteString
         imageView.isHidden = false
         imageView.image = NSImage(contentsOf: URL)
+        imageURL = URL
     }
     
     func dragDropView(_ dragDropView: ADragDropView, droppedFilesWithURLs URLs: [URL]) {
